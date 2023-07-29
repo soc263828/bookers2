@@ -2,5 +2,10 @@
 <p>Find me in app/views/books/show.html.erb</p>
 <%= render 'new', book: @book %>
 <%= render 'users/info', user: @user %>
+<%= @user.image %>
 <%= @book.title %>
 <%= @book.body %>
+<% if @user == current_user %>
+    <%= link_to "プロフィール編集", edit_book_path(@book) %>
+    <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+<% end %>

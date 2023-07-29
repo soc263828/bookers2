@@ -1,6 +1,7 @@
 <h1>User info</h1>
 
 <画像>
+<%= user.image %>
 
 <h4>name</h4>
 <%= user.name %>
@@ -9,4 +10,6 @@
 <%= user.introduction %>
 
 <editページへ>
-  
+  <%= link_to edit_user_path(user.id) do %>
+  <i class="fa-solid fa-user-gear"></i>
+<% end %>
