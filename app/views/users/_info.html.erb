@@ -1,15 +1,14 @@
 <h1>User info</h1>
 
-<画像>
-<%= user.image %>
+
+<%= image_tag user.get_profile_image %>
 
 <h4>name</h4>
 <%= user.name %>
 
 <h4>introduction</h4>
 <%= user.introduction %>
-
-<editページへ>
-  <%= link_to edit_user_path(user.id) do %>
-  <i class="fa-solid fa-user-gear"></i>
+ <!--editページへ-->
+<%= link_to edit_user_path(user.id) do %>
+　<i class="fas fa-user-cog" ></i>
 <% end %>
