@@ -1,8 +1,6 @@
+<%= form_with model: user, url: users_path,method: :post do |f| %>
 <h1>User info</h1>
-
-
-<%= image_tag user.get_profile_image %>
-
+<%= image_tag @user.get_profile_image %>
 <h4>name</h4>
 <%= user.name %>
 
@@ -11,4 +9,5 @@
  <!--editページへ-->
 <%= link_to edit_user_path(user.id) do %>
 　<i class="fas fa-user-cog" ></i>
+<% end %>
 <% end %>
