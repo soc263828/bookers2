@@ -30,32 +30,32 @@
                  <% end %>
                </li>
                <li>
-                 <%= link_to users_path(@user) do %>
+                 <%= link_to users_path do %>
                  <i class="fas fa-users" aria-hidden="true"></i>
                  Users
                  <% end %>
                </li>
                <li>
-                 <%= link_to books_path(@book) do %>
+                 <%= link_to books_path do %>
                  <i class="fas fa-book-open" aria-hidden="true"></i>
                  Books
                  <% end %>
                </li>
                <li>
-　　　　　　　　 <%= link_to destroy_user_session_path, method: :delete do %>
-　　　　　　　　 <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
-　　　　　　　　 Log out
-　　　　　　　　 <% end %>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                  Log out
+                <% end %>
                </li>
               <% else %>
               <li>
                 <%= link_to root_path do %>
-                 <i class="fas fa-home" aria-hidden="true">
+                 <i class="fas fa-home" aria-hidden="true"></i>
                  Home
                  <% end %>
               </li>
               <li>
-                <%= link_to home_about_path do %>
+                <%= link_to about_path do %>
                  <i class="fas fa-link" aria-hidden="true"></i>
                  About
                  <% end %>

@@ -1,9 +1,5 @@
-/app/views/users/index
 
-<%= form_with model: @book, url:'/index' do |f| %>
+
 <%= render 'info', user: @user %>
 
-
- 1<p>投稿ユーザー画像：<%= image_tag post_image.user.get_profile_image(100,100) %></p>
- 2 <%= f.file_field :image, accept: "image/*" %>
- <% end %>
+<%= render 'books/new', book: @book %>
