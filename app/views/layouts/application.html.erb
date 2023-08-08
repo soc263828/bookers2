@@ -15,7 +15,11 @@
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <div class="container">
          <a class="nabar-brand">
-          <span>Bookers</span>
+          <span>
+            <%= link_to root_path do %>
+            Bookers
+            <% end %>
+          </span>
          </a>
          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -55,7 +59,7 @@
                  <% end %>
               </li>
               <li>
-                <%= link_to about_path do %>
+                <%= link_to home_about_path do %>
                  <i class="fas fa-link" aria-hidden="true"></i>
                  About
                  <% end %>
