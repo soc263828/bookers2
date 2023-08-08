@@ -17,11 +17,11 @@
             </tr>
           </thead>
           <tbody>
-           <% @books.each do |book| %>
+           <% @users.each do |user| %>
             <tr>
-             <td><%= image_tag @users.get_profile_image %></td>
-             <td><%= book.title %></td>
-             <td><%= book.body %></td>
+             <td><%= image_tag user.get_profile_image %></td>
+             <td><%= user.name %></td>
+             <td><%= link_to "show", user_path(user.id) %></td>
              <td></td>
             </tr>
            <% end %>
