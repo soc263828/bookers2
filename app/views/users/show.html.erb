@@ -20,8 +20,13 @@
      <tbody>
       <% @books.each do |book| %>
       <tr>
-       <td><%= image_tag @users.get_profile_image %></td>
-       <td><%= book.title %></td>
+       <td><%= image_tag @users.get_profile_image(100,100) %></td>
+       <td>
+        <%= link_to book_path(book.user) do %>
+        <%= book.title %>
+        <% end %>
+       </td>
+
        <td><%= book.body %></td>
        <td></td>
       </tr>
