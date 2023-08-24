@@ -8,21 +8,21 @@
    <h2>Book detail</h2>
    <table class="table">
     <tbody>
-     <% @books.each do |book| %>
      <tr>
       <td><%= image_tag @user.get_profile_image %></td>
       <td><%= @book.title %></td>
       <td><%= @book.body %></td>
-      <td><% if @user == current_user %>
+      <% if @user == current_user %>
+      <td>
           <%= link_to "Edit", edit_book_path(@book) %>
       </td>
-      <td><% if @book.user == current_user %>
+      <td>
           <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
       </td>
+      <% end %>
      </tr>
-     <% end %>
-     <% end %>
-    <% end %>
+
+
     </tbody>
    </table>
   </div>
